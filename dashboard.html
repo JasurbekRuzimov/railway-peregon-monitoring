@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asosiy • Railway-peregon.monitoring.uz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <span class="badge">Railway-peregon.monitoring.uz</span>
+        <span class="helper">Monitoring • Signal nuqtalari</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <span class="helper" id="whoami"></span>
+        <button class="btn danger" onclick="logout()">Chiqish</button>
+      </div>
+    </div>
+
+    <div class="section-title">Asosiy oyna</div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3 id="modalTitle">Parametrlar</h3>
+        <button class="btn" onclick="closeModal()">Yopish</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="two-col">
+          <div class="panel">
+            <h4>Toq yo’nalish</h4>
+            <div class="kv">
+              <div class="k">Yo’nalish</div>
+              <div class="v" id="oddDir">—</div>
+            </div>
+            <div class="kv">
+              <div class="k">Kuchlanish qiymati</div>
+              <div class="v"><span id="oddVolt">—</span> <small>V</small></div>
+            </div>
+            <div class="kv">
+              <div class="k">Lampa almashtirilgan sana</div>
+              <div class="v" id="oddDateText">—</div>
+            </div>
+            <div class="kv">
+              <div class="k">Almashtirilgan sana kiritish</div>
+              <div class="v"><input type="date" id="oddDateInput"></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h4>Juft yo’nalish</h4>
+            <div class="kv">
+              <div class="k">Yo’nalish</div>
+              <div class="v" id="evenDir">—</div>
+            </div>
+            <div class="kv">
+              <div class="k">Kuchlanish qiymati</div>
+              <div class="v"><span id="evenVolt">—</span> <small>V</small></div>
+            </div>
+            <div class="kv">
+              <div class="k">Lampa almashtirilgan sana</div>
+              <div class="v" id="evenDateText">—</div>
+            </div>
+            <div class="kv">
+              <div class="k">Almashtirilgan sana kiritish</div>
+              <div class="v"><input type="date" id="evenDateInput"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="savebar">
+        <div>
+          <div class="toast ok" id="toastOk">Saqlandi ✅</div>
+          <div class="toast err" id="toastErr">Xatolik ❌</div>
+        </div>
+        <button class="btn primary" onclick="saveDates()">Saqlash</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
