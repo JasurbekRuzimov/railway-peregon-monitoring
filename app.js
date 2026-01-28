@@ -21,7 +21,7 @@ const SIGNAL_HOTSPOTS = [
   },
   {
     "id": 3,
-    "title": "Signal 3",
+    "title": "2/13 signal nuqtasi",
     "left": 12.411347517730496,
     "top": 2.3255813953488373,
     "width": 2.2458628841607564,
