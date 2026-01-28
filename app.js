@@ -1,6 +1,6 @@
 const AUTH_KEY = "rpm_auth_user";
 const DEFAULT_USER = { username: "admin", password: "admin" };
-const DATA_KEY = "rpm_signal_data_v2_blueprint";
+const DATA_KEY = "rpm_signal_data_v3_blueprint";
 
 const SIGNAL_HOTSPOTS = [
   {
@@ -106,9 +106,9 @@ function getSignals(){
   if (raw){
     try{ return JSON.parse(raw); }catch(e){}
   }
-  const arr = SIGNAL_HOTSPOTS.map(h => ({
-    id: h.id,
-    title: "2/13 signal nuqtasi",
+ const arr = SIGNAL_HOTSPOTS.map(h => ({
+  id: h.id,
+  title: h.title,
     oddDirectionName: "Kumkurgan - Elbayan",
     oddVoltage: 11.5,
     oddLampReplacedDate: "2025-11-25",
