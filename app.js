@@ -108,7 +108,7 @@ function getSignals(){
   }
   const arr = SIGNAL_HOTSPOTS.map(h => ({
     id: h.id,
-    title: h.title,
+    title: "2/13 signal nuqtasi",
     oddDirectionName: "Kumkurgan - Elbayan",
     oddVoltage: 11.5,
     oddLampReplacedDate: "2025-11-25",
